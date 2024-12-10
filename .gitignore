@@ -96,7 +96,7 @@ testem.log
 Thumbs.db
 
 # Dont upload json files
-*.json
+#*.json
 
 #Node modules
 node_modules/
