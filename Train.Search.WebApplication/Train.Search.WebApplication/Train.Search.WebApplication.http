@@ -1,0 +1,6 @@
+@Train.Search.WebApplication_HostAddress = http://localhost:5217
+
+GET {{Train.Search.WebApplication_HostAddress}}/railapi/
+Accept: application/json
+
+###

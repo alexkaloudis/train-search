@@ -1,0 +1,56 @@
+.disturbance {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+.disturbance-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+
+.search-bar{
+  color: white;
+  padding: 1vw;
+}
+
+.upper-section{
+  background-color: lightblue;
+}
+
+.upper-section h1{
+  padding-left: 1vw;
+}
+.search-bar.input{
+  background-color: powderblue;
+  /* padding: 2vw; */
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+
+.sorting-spinner{
+  color: white;
+  padding: 1vw;
+}
+
+.disturbance-card {
+  background-color: lightcyan;
+}
+
+.disturbance-description {
+  padding: 10px 20px 20px 20px;
+}
+
+
+section.disturbance a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+section.disturbance a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+

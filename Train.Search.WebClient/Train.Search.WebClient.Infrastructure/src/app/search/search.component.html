@@ -1,0 +1,46 @@
+<section class="upper-section">
+  <h1 class="upper-heading">Train Search</h1>
+  <mat-form-field class="search-bar">
+    <input matInput placeholder="Filter by search term" #filter>
+  </mat-form-field>
+
+  <mat-form-field class="sorting-spinner">
+    <mat-select
+    (selectionChange)="onOptionChange($event.value)"
+    [(ngModel)]="selectedSort"
+    >
+      <mat-option
+        *ngFor="let item of sortingOptions"
+        [value]="item.value">
+        {{ item.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button (click)="filterResults(filter.value)">Search</button>
+</section>
+
+
+<hr class="solid">
+
+<div *ngIf="isLoading" class="spinner">Loading...</div>
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="!isLoading">
+  <section class="disturbance" *ngFor="let disturbance of disturbancesList">
+    <mat-card class="disturbance-card">
+        <h2 class="disturbance-heading">{{ disturbance.title }}</h2>
+        <p class="disturbance-description">{{ disturbance.description }}</p>
+        <!-- go to the link of the disturbance -->
+        <a [href]="disturbance.link" target="_blank">Learn More</a>
+    </mat-card>
+  </section>
+
+  <mat-paginator #paginator
+                 [length]="length"
+                 [pageIndex]="pageIndex"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[10, 25]"
+                 (page)="loadDisturbances($event)">
+  </mat-paginator>
+</div>
+
+
