@@ -13,7 +13,9 @@ RUN dotnet publish "Train.Search.WebApplication/Train.Search.WebApplication.cspr
 # Frontend Build Stage
 FROM node:18 AS frontend-build
 WORKDIR /src/frontend
-COPY Train.Search.WebClient/Train.Search.WebClient.Infrastructure ./
+# Change this to match your exact directory structure
+COPY ./Train.Search.WebClient/Train.Search.WebClient.Infrastructure/ ./
+RUN ls -la  # Add this to debug and show copied files
 RUN npm install
 RUN npm run build
 
