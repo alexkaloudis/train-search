@@ -4,7 +4,6 @@ WORKDIR /app
 
 # Copy solution and project files
 COPY Train.Search.WebApplication/*.csproj ./Train.Search.WebApplication/
-COPY Train.Search.WebApplication.Infrastructure/*.csproj ./Train.Search.WebApplication.Infrastructure/
 RUN dotnet restore "Train.Search.WebApplication/Train.Search.WebApplication.csproj"
 
 # Copy entire solution
@@ -14,7 +13,7 @@ RUN dotnet publish "Train.Search.WebApplication/Train.Search.WebApplication.cspr
 # Frontend Build Stage
 FROM node:18 AS frontend-build
 WORKDIR /src/frontend
-COPY Train.Search.WebClient/Train.Search.WebClient.Infrastructure .
+COPY Train.Search.WebClient/Train.Search.WebClient.Infrastructure ./
 RUN npm install
 RUN npm run build
 
