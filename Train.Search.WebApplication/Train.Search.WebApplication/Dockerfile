@@ -11,10 +11,3 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT [ "dotnet", "Train.Search.WebApplication.dll" ]
-
-
-FROM node:18 AS frontend-build
-WORKDIR /src/frontend
-COPY ["Train.Search.WebClient/Train.Search.WebClient.Infrastructure/", "."]
-RUN npm install
-RUN npm run build
