@@ -4,15 +4,15 @@ using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Analysis.TokenAttributes;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
+using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
 using Lucene.Net.Util;
-using Lucene.Net.QueryParsers.Classic;
-using Train.Search.WebApplication.Infrastructure.DtoManipulators;
-using Train.Search.WebApplication.Infrastructure.ExternalHttpServices;
-using Train.Search.WebApplication.Infrastructure.Pagination;
+using Train.Search.WebApplication.DtoManipulators;
+using Train.Search.WebApplication.ExternalHttpServices;
+using Train.Search.WebApplication.Pagination;
 
-namespace Train.Search.WebApplication.Infrastructure.Search;
+namespace Train.Search.WebApplication.Search;
 
 public class ApacheLuceneSearchService
 {

@@ -1,4 +1,4 @@
-namespace Train.Search.WebApplication.Infrastructure.Models.Dto;
+namespace Train.Search.WebApplication.Models.Dto;
 
 public class StationIncomingData
 {

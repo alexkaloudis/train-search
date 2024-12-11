@@ -1,12 +1,9 @@
-using System.Globalization;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using Train.Search.WebApplication.Infrastructure.Models.Configuration;
-using Train.Search.WebApplication.Infrastructure.Models.Dto;
-using Train.Search.WebApplication.Infrastructure.Pagination;
+using Train.Search.WebApplication.Models.Configuration;
+using Train.Search.WebApplication.Pagination;
 
-namespace Train.Search.WebApplication.Infrastructure.ExternalHttpServices;
+namespace Train.Search.WebApplication.ExternalHttpServices;
 
 public class RailHttpClient : IRailHttpClient
 {

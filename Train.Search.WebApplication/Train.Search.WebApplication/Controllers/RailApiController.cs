@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Train.Search.WebApplication.Infrastructure.ExternalHttpServices;
-using Train.Search.WebApplication.Infrastructure.Pagination;
-using Train.Search.WebApplication.Infrastructure.Search;
+using Train.Search.WebApplication.ExternalHttpServices;
+using Train.Search.WebApplication.Pagination;
+using Train.Search.WebApplication.Search;
 
 namespace Train.Search.WebApplication.Controllers;
 

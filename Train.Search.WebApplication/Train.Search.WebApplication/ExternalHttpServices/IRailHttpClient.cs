@@ -1,6 +1,6 @@
-using Train.Search.WebApplication.Infrastructure.Pagination;
+using Train.Search.WebApplication.Pagination;
 
-namespace Train.Search.WebApplication.Infrastructure.ExternalHttpServices;
+namespace Train.Search.WebApplication.ExternalHttpServices;
 
 public interface IRailHttpClient
 {

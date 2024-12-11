@@ -1,7 +1,7 @@
-using Train.Search.WebApplication.Infrastructure.DtoManipulators;
-using Train.Search.WebApplication.Infrastructure.ExternalHttpServices;
-using Train.Search.WebApplication.Infrastructure.Models.Configuration;
-using Train.Search.WebApplication.Infrastructure.Search;
+using Train.Search.WebApplication.DtoManipulators;
+using Train.Search.WebApplication.ExternalHttpServices;
+using Train.Search.WebApplication.Models.Configuration;
+using Train.Search.WebApplication.Search;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +31,6 @@ builder.Services.Configure<RailUris>(
     builder.Configuration.GetSection(
         key: nameof(RailUris)));
 builder.Services.AddScoped<IRailHttpClient, RailHttpClient>();
-builder.Services.AddScoped<OpenSearchService>();
 builder.Services.AddScoped<ApacheLuceneSearchService>();
 builder.Services.AddScoped<PagedResultManipulator>();
 builder.Services.AddHttpClient("irail-client", client =>

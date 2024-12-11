@@ -1,4 +1,4 @@
-﻿namespace Train.Search.WebApplication.Infrastructure.Pagination
+﻿namespace Train.Search.WebApplication.Pagination
 {
     public class PagedResult<T>
     {

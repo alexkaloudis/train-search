@@ -1,4 +1,4 @@
-namespace Train.Search.WebApplication.Infrastructure.Models.Configuration;
+namespace Train.Search.WebApplication.Models.Configuration;
 
 public class RailUris
 {
