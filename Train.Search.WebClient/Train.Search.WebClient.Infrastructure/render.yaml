@@ -1,0 +1,9 @@
+ services:
+  - type: web
+    name: your-angular-app
+    # envVar: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist/train.search.web-client.infrastructure
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
