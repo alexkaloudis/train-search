@@ -51,7 +51,7 @@ public class RailHttpClient : IRailHttpClient
         var result = await _client.GetAsync($"{_configuration.DisturbancesUri}");
         if (!result.IsSuccessStatusCode)
         {
-            _logger.LogInformation("Stations request failed");
+            _logger.LogInformation("Disturbances request failed");
         }
         string jsonContent = await result.Content.ReadAsStringAsync();
         //var deserialized = JsonConvert.DeserializeObject<Disturbance>(jsonContent);
